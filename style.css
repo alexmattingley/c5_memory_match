@@ -1,3 +1,31 @@
-body {
-	display: none;
+/*Main-body*/
+
+.main-body {
+	margin: 40px;
+	background: red;
+}
+
+
+
+.indiv-card {
+	background: green;
+	position: relative;
+	height: 200px;
+	display: inline-block;
+}
+
+.front-face, .back-face {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	height: 200px;
+}
+
+
+/*Sidebar*/
+
+.left-sidebar {
+	background: black;
+	height: 100%;
 }
