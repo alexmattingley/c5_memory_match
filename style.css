@@ -10,8 +10,8 @@
 .indiv-card {
 	background: green;
 	position: relative;
+	width: 98%;
 	height: 200px;
-	display: inline-block;
 }
 
 .front-face, .back-face {
