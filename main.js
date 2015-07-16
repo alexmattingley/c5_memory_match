@@ -1,3 +1,3 @@
 function card_click() {
-	console.log('You have clicked a card');
+	$('#card_back1').hide();
 }
