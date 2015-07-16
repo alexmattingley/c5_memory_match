@@ -10,18 +10,19 @@ function card_click(card_back_id, card_front_id) {
 	if(next_card_is_second_click == false) {
 		//I am at the first card clicked
 		card_src_one = card_src;
-		console.log('I am at the first card clicked and my source is ' + card_src_one);
+		//console.log('I am at the first card clicked and my source is ' + card_src_one);
 		next_card_is_second_click = true;
 		
 	}
 	else {
-		card_src_two = card_src;
-		console.log('I am at the second card clicked and my source is ' + card_src_two);
+		var card_src_two = card_src;
+		//console.log('I am at the second card clicked and my source is ' + card_src_two);
 		if (card_src_one == card_src_two) {
-			console.log('My cards srcs match and they shouldnt. do it again');
+			console.log('You did it! your zoo animals match!');
 		}
 		else {
-			console.log('try again');
+			console.log('Your zoo animals dont match, pick other zoo animals');
+
 		}
 	}
 	
