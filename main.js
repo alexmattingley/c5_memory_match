@@ -1,6 +1,7 @@
 var card_back_id = null;
 var card_front_id = null;
 var next_card_is_second_click = false;
+var card_src_one = null;
 function card_click(card_back_id, card_front_id) {
 	$(card_back_id).hide();
 	var card_src = $(card_front_id).attr('src');
