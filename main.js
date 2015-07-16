@@ -5,7 +5,11 @@ function card_click(card_back_id, card_front_id) {
 	var card_src = $(card_front_id).attr('src');
 	console.log('the image\'s source is ' + card_src);
 	if (card_back_id == '#card_back1') {
-		console.log('The first card has been clicked');
-	};
+		var card_src_one = $(card_front_id).attr('src');
+		console.log('that is the first card');
+	}
+	else {
+		console.log('that is not the first card');
+	}
 	
 }
