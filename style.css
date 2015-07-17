@@ -20,3 +20,10 @@
 .selected {
     display: none;
 }
+
+.main-body {
+	margin-top: 40px; 
+}
+.main-body-card-container {
+	margin-bottom: 40px;
+}
