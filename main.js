@@ -34,9 +34,11 @@ function card_click(card_back_id, card_front_id) {
 				$(card_back_id).show();
 			}
 			setTimeout(showBackFace, 1000);
+
 		}
 		next_card_is_second_click = false;
 	}
+
 	
 }
 // Current Bug: We need to figure out how to stop the clicking after the second card is clicked. 
