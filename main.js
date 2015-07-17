@@ -20,18 +20,24 @@ function card_click(card_back_id, card_front_id) {
 		//console.log('I am at the second card clicked and my source is ' + card_src_two);
 		if (card_src_one == card_src_two) {
 			console.log('You did it! your zoo animals match!');
-			$(first_card_front_id).hide();
-			$(card_front_id).hide();
-
+			function hideFrontFace() {
+				$(first_card_front_id).hide();
+				$(card_front_id).hide();
+			}
+ 			setTimeout(hideFrontFace, 500);
 		}
 		else {
 			console.log('Your zoo animals dont match, pick other zoo animals');
 			alert('Your cards dont match');
-			$(first_card_back_id).show();
-			$(card_back_id).show();
-			
+			function showBackFace(){
+				$(first_card_back_id).show()
+				$(card_back_id).show();
+			}
+			setTimeout(showBackFace, 1000);
 		}
 		next_card_is_second_click = false;
 	}
 	
 }
+// Current Bug: We need to figure out how to stop the clicking after the second card is clicked. 
+//Spazzy clickers will break the app
