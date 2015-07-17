@@ -29,9 +29,9 @@ function card_click(card_back_id, card_front_id) {
 			alert('Your cards dont match');
 			$(first_card_back_id).show();
 			$(card_back_id).show();
-
+			
 		}
-
+		next_card_is_second_click = false;
 	}
 	
 }
