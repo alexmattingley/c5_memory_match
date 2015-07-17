@@ -2,7 +2,11 @@ var first_card_back_id = null;
 var first_card_front_id = null;
 var next_card_is_second_click = false;
 var card_src_one = null;
+var can_click_card = true;
 function card_click(card_back_id, card_front_id) {
+	if(can_click_card == false){
+		return;
+	}
 	$(card_back_id).hide();
 	var card_src = $(card_front_id).attr('src');
 	// console.log('the image\'s source is ' + card_src);
@@ -16,6 +20,7 @@ function card_click(card_back_id, card_front_id) {
 		
 	}
 	else {
+		can_click_card = false;
 		var card_src_two = card_src;
 		//console.log('I am at the second card clicked and my source is ' + card_src_two);
 		if (card_src_one == card_src_two) {
@@ -23,18 +28,20 @@ function card_click(card_back_id, card_front_id) {
 			function hideFrontFace() {
 				$(first_card_front_id).hide();
 				$(card_front_id).hide();
+				can_click_card = true;
 			}
- 			setTimeout(hideFrontFace, 500);
+ 			setTimeout(hideFrontFace, 2000);
 		}
 		else {
 			console.log('Your zoo animals dont match, pick other zoo animals');
-			alert('Your cards dont match');
+			
 			function showBackFace(){
 				$(first_card_back_id).show()
 				$(card_back_id).show();
+				can_click_card = true;
 			}
-			setTimeout(showBackFace, 1000);
-
+			setTimeout(showBackFace, 2000);
+			console.log('one');
 		}
 		next_card_is_second_click = false;
 	}
