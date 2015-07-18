@@ -1,10 +1,11 @@
 /*Header*/
-strike {
-	color: red;
+.default-none {
+	display: none;
 }
 
 .strikethrough {
 	text-decoration: line-through;
+	color: red;
 }
 /*Main-body*/
 h1 {
