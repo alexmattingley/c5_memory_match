@@ -55,5 +55,9 @@ function card_click(card_back_id, card_front_id) {
 	}
 	$(".score-board").text(scorecount);
 }
-// Current Bug: We need to figure out how to stop the clicking after the second card is clicked. 
-//Spazzy clickers will break the app
+function game_reset(){
+	$(".front-face").show();
+	$(".back-face").show();
+	scorecount = 0;
+	$(".score-board").text(scorecount);
+}
