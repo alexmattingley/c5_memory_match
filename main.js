@@ -3,6 +3,7 @@ var first_card_front_id = null;
 var next_card_is_second_click = false;
 var card_src_one = null;
 var can_click_card = true;
+
 function card_click(card_back_id, card_front_id) {
 	if(can_click_card == false){
 		return;
