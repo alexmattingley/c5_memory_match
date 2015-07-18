@@ -9,11 +9,18 @@ function card_click(card_back_id, card_front_id) {
 	if(can_click_card == false){
 		return;
 	}
-
+	
 		if(!strikethrough){
+			//strikethrough code
 			$(".zoo").addClass("strikethrough");
 			$(".default-none").css("display", "inline");
 			strikethrough = true;
+
+			//body background change
+
+			$("body").css("background", "url('https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg')");
+			$("body").css("background-size", "cover");
+			$("body").css("background-repeat", "no-repeat");
 		}
 	$(card_back_id).hide();
 	var card_src = $(card_front_id).attr('src');
