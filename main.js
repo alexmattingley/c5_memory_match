@@ -4,6 +4,7 @@ var next_card_is_second_click = false;
 var card_src_one = null;
 var can_click_card = true;
 var strikethrough = false;
+var scorecount = 0;
 function card_click(card_back_id, card_front_id) {
 	if(can_click_card == false){
 		return;
@@ -32,6 +33,7 @@ function card_click(card_back_id, card_front_id) {
 		//console.log('I am at the second card clicked and my source is ' + card_src_two);
 		if (card_src_one == card_src_two) {
 			console.log('You did it! your zoo animals match!');
+			scorecount++;
 			function hideFrontFace() {
 				$(first_card_front_id).hide();
 				$(card_front_id).hide();
@@ -41,19 +43,17 @@ function card_click(card_back_id, card_front_id) {
 		}
 		else {
 			console.log('Your zoo animals dont match, pick other zoo animals');
-			
 			function showBackFace(){
 				$(first_card_back_id).show()
 				$(card_back_id).show();
 				can_click_card = true;
 			}
 			setTimeout(showBackFace, 2000);
-			console.log('one');
+	
 		}
 		next_card_is_second_click = false;
 	}
-
-	
+	$(".score-board").text(scorecount);
 }
 // Current Bug: We need to figure out how to stop the clicking after the second card is clicked. 
 //Spazzy clickers will break the app
