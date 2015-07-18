@@ -9,7 +9,7 @@ function card_click(card_back_id, card_front_id) {
 	if(can_click_card == false){
 		return;
 	}
-	
+
 		if(!strikethrough){
 			//strikethrough code
 			$(".zoo").addClass("strikethrough");
@@ -22,7 +22,15 @@ function card_click(card_back_id, card_front_id) {
 			$("body").css("background-size", "cover");
 			$("body").css("background-repeat", "no-repeat");
 		}
-	$(card_back_id).hide();
+	//Hide card takes place
+	$("#container-one").css("transform", "rotateY(180deg)");
+	$("#container-one").css("transition", "all 1.0s linear"); 
+	
+	function hideCard() {
+		$(card_back_id).hide();
+	}
+
+	setTimeout(hideCard, 500);
 	var card_src = $(card_front_id).attr('src');
 	// console.log('the image\'s source is ' + card_src);
 	if(next_card_is_second_click == false) {
