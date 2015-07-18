@@ -5,7 +5,7 @@ var card_src_one = null;
 var can_click_card = true;
 var strikethrough = false;
 var scorecount = 0;
-function card_click(card_back_id, card_front_id) {
+function card_click(card_back_id, card_front_id, container_id) {
 	if(can_click_card == false){
 		return;
 	}
@@ -22,15 +22,18 @@ function card_click(card_back_id, card_front_id) {
 			$("body").css("background-size", "cover");
 			$("body").css("background-repeat", "no-repeat");
 		}
-	//Hide card takes place
-	$("#container-one").css("transform", "rotateY(180deg)");
-	$("#container-one").css("transition", "all 1.0s linear"); 
+	//flip transform takes place
+
+	$(container_id).css("transform", "rotateY(180deg)");
+	$(container_id).css("transition", "all 1.0s linear"); 
 	
+	//hide function is defined
 	function hideCard() {
 		$(card_back_id).hide();
 	}
-
+	//hide function is called
 	setTimeout(hideCard, 500);
+
 	var card_src = $(card_front_id).attr('src');
 	// console.log('the image\'s source is ' + card_src);
 	if(next_card_is_second_click == false) {
@@ -64,12 +67,19 @@ function card_click(card_back_id, card_front_id) {
 				can_click_card = true;
 			}
 			setTimeout(showBackFace, 2000);
-	
 		}
 		next_card_is_second_click = false;
+		function removeStyle() {
+		$(container_id).removeAttr('style');
+		}
+
+		setTimeout(removeStyle, 2000);
 	}
 	$(".score-board").text(scorecount);
+	
 }
+
+//button for the game reset.
 function game_reset(){
 	$(".front-face").show();
 	$(".back-face").show();
