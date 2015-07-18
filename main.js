@@ -9,11 +9,11 @@ function card_click(card_back_id, card_front_id) {
 		return;
 	}
 
-	if(!strikethrough){
-		$(".zoo").addClass("strikethrough");
-		$(".default-none").css("display", "inline");
-		strikethrough = true;
-	}
+		if(!strikethrough){
+			$(".zoo").addClass("strikethrough");
+			$(".default-none").css("display", "inline");
+			strikethrough = true;
+		}
 	$(card_back_id).hide();
 	var card_src = $(card_front_id).attr('src');
 	// console.log('the image\'s source is ' + card_src);

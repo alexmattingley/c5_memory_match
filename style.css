@@ -8,12 +8,21 @@
 	color: red;
 }
 /*Main-body*/
+
 h1 {
 	color: white;
 }
 
 body {
 	background: url('http://www.hyscience.com/DONKEY-GIVES-ASS-550x372.jpg');
+}
+
+.left-sidebar {
+	background: white;
+	height: 400px;
+	border-radius: 5px;
+	background: #337ab7;
+	color: white;
 }
 
 .indiv-card-cont {
@@ -39,7 +48,8 @@ body {
 }
 
 .main-body {
-	margin-top: 40px; 
+	margin-top: 40px;
+
 }
 .main-body-card-container {
 	margin-bottom: 40px; 
