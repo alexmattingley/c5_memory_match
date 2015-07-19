@@ -4,6 +4,7 @@ var next_card_is_second_click = false;
 var card_src_one = null;
 var can_click_card = true;
 var strikethrough = false;
+var container_id1 = null;
 var scorecount = 0;
 function card_click(card_back_id, card_front_id, container_id) {
 	if(can_click_card == false){
@@ -24,9 +25,10 @@ function card_click(card_back_id, card_front_id, container_id) {
 		}
 	//flip transform takes place
 
+
 	$(container_id).css("transform", "rotateY(180deg)");
-	$(container_id).css("transition", "all 1.0s linear"); 
-	
+	$(container_id).css("transition", "all 1.0s linear");
+	console.log(container_id); 
 	//hide function is defined
 	function hideCard() {
 		$(card_back_id).hide();
@@ -43,6 +45,9 @@ function card_click(card_back_id, card_front_id, container_id) {
 		next_card_is_second_click = true;
 		first_card_back_id = card_back_id;
 		first_card_front_id = card_front_id;
+		
+		//defines the first container clicked so we can identify it for the remove style attr.
+		container_id1 = container_id;
 		
 	}
 	else {
@@ -71,6 +76,7 @@ function card_click(card_back_id, card_front_id, container_id) {
 		next_card_is_second_click = false;
 		function removeStyle() {
 		$(container_id).removeAttr('style');
+		$(container_id1).removeAttr('style');
 		}
 
 		setTimeout(removeStyle, 2000);
