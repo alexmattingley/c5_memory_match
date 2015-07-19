@@ -43,7 +43,7 @@ function card_click(card_back_id, card_front_id, container_id) {
 		next_card_is_second_click = true;
 		first_card_back_id = card_back_id;
 		first_card_front_id = card_front_id;
-		
+		//this removes the flip styles allowing someone to flip again.
 	}
 	else {
 		can_click_card = false;
@@ -69,13 +69,16 @@ function card_click(card_back_id, card_front_id, container_id) {
 			setTimeout(showBackFace, 2000);
 		}
 		next_card_is_second_click = false;
+
+		//this removes the flip styles allowing someone to flip again.
 		function removeStyle() {
-		$(container_id).removeAttr('style');
+
+			$(container_id).removeAttr('style');
+
 		}
 
 		setTimeout(removeStyle, 2000);
 	}
-	$(".score-board").text(scorecount);
 	
 }
 
