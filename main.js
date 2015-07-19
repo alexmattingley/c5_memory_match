@@ -86,6 +86,7 @@ function card_click(card_back_id, card_front_id, container_id) {
 
 		setTimeout(removeStyle, 2000);
 	}
+	$(".score-board").text(scorecount);
 	
 }
 
