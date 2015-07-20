@@ -6,6 +6,8 @@ var can_click_card = true;
 var strikethrough = false;
 var container_id1 = null;
 var scorecount = 0;
+var accuracyCount = 0;
+var misPick = 0;
 function card_click(card_back_id, card_front_id, container_id) {
 	if(can_click_card == false){
 		return;
@@ -67,6 +69,7 @@ function card_click(card_back_id, card_front_id, container_id) {
 		}
 		else {
 			console.log('Your zoo animals dont match, pick other zoo animals');
+			misPick++;
 			function showBackFace(){
 				$(first_card_back_id).show()
 				$(card_back_id).show();
@@ -89,6 +92,13 @@ function card_click(card_back_id, card_front_id, container_id) {
 	//displays score
 	$(".score-board").text(scorecount);
 
+	//displays mispicks
+	console.log(misPick);
+
+	//accuracy
+	var accuracy = scorecount / misPick * 10;
+	$(".accuracy").text(accuracy);
+
 	//displays win message
 	if(scorecount == 9) {
 		$(".win-message").css('display', 'block');
@@ -102,6 +112,8 @@ function game_reset(){
 	$(".back-face").show();
 	scorecount = 0;
 	$(".score-board").text(scorecount);
+	accuracy = 0;
+	$(".accuracy").text(accuracy);
 	$(".win-message").css('display', 'none');
 }
 
