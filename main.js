@@ -86,8 +86,10 @@ function card_click(card_back_id, card_front_id, container_id) {
 
 		setTimeout(removeStyle, 2000);
 	}
+	//displays score
 	$(".score-board").text(scorecount);
 
+	//displays win message
 	if(scorecount == 9) {
 		$(".win-message").css('display', 'block');
 	}
@@ -102,3 +104,15 @@ function game_reset(){
 	$(".score-board").text(scorecount);
 	$(".win-message").css('display', 'none');
 }
+
+//Things I'd like to do:
+
+//improve graphics of stretched images and gifs, I dont know how to work photoshop but I need to learn
+//get the cards to spin back after wrong selection rather than just spin in one direction
+//create a employer friendly version for github profile (just need a different initial background image)
+//^or create a box when you enter the site that warns people of potentially offensive content
+//improve the design of the side bar, and maybe insert a logo of some sort
+//get an accuracy counter up and running
+//randomize image order upon reset.
+//download and optimize all images as assets rather than external files
+//A more fun win message, maybe something with that ron paul its happening gif?
