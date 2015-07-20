@@ -124,7 +124,7 @@ function game_reset(){
 //create a employer friendly version for github profile (just need a different initial background image)
 //^or create a box when you enter the site that warns people of potentially offensive content
 //improve the design of the side bar, and maybe insert a logo of some sort
-//get an accuracy counter up and running
+//get timer up and running
 //randomize image order upon reset.
 //download and optimize all images as assets rather than external files
 //A more fun win message, maybe something with that ron paul its happening gif?
