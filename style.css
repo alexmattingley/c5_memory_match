@@ -25,6 +25,10 @@ body {
 	padding-bottom: 40px;
 }
 
+h3.win-message {
+	display: none;
+}
+
 .indiv-card-cont {
     width: 150px;
     display: inline-block;

@@ -87,6 +87,10 @@ function card_click(card_back_id, card_front_id, container_id) {
 		setTimeout(removeStyle, 2000);
 	}
 	$(".score-board").text(scorecount);
+
+	if(scorecount == 9) {
+		$(".win-message").css('display', 'block');
+	}
 	
 }
 
@@ -96,4 +100,5 @@ function game_reset(){
 	$(".back-face").show();
 	scorecount = 0;
 	$(".score-board").text(scorecount);
+	$(".win-message").css('display', 'none');
 }
