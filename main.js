@@ -13,30 +13,30 @@ function card_click(card_back_id, card_front_id, container_id) {
 		return;
 	}
 
-		if(!strikethrough){
-			//strikethrough code
-			$(".zoo").addClass("strikethrough");
-			$(".default-none").css("display", "inline");
-			strikethrough = true;
+	if(!strikethrough){
+		//strikethrough code
+		$(".zoo").addClass("strikethrough");
+		$(".default-none").css("display", "inline");
+		strikethrough = true;
 
-			//body background change
+		//body background change
 
-			$("body").css("background", "url('https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg')");
-			$("body").css("background-size", "cover");
-			$("body").css("background-repeat", "no-repeat");
-		}
+		$("body").css("background", "url('https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg')");
+		$("body").css("background-size", "cover");
+		$("body").css("background-repeat", "no-repeat");
+	}
 	//flip transform takes place
 
 
 	$(container_id).css("transform", "rotateY(180deg)");
-	$(container_id).css("transition", "all 1.0s linear");
+	$(container_id).css("transition", "all .8s linear");
 	console.log(container_id); 
 	//hide function is defined
 	function hideCard() {
 		$(card_back_id).hide();
 	}
 	//hide function is called
-	setTimeout(hideCard, 500);
+	setTimeout(hideCard, 400);
 
 	var card_src = $(card_front_id).attr('src');
 	// console.log('the image\'s source is ' + card_src);
@@ -97,7 +97,7 @@ function card_click(card_back_id, card_front_id, container_id) {
 
 	//accuracy
 	var accuracy = scorecount / misPick * 10;
-	$(".accuracy").text(accuracy);
+	$(".accuracy").text(accuracy.toFixed(2));
 
 	//displays win message
 	if(scorecount == 9) {
